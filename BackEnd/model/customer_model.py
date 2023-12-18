@@ -17,7 +17,7 @@ logger_customer = AppLogger()
 class Customer:
     def __init__(self):
         try:
-            self.con = mysql.connector.connect(host="localhost", user='root', password="9etRufraqe",
+            self.con = mysql.connector.connect(host="localhost", user='root', password="",
                                                database="kammarcials")
             self.con.autocommit = True
             self.cur = self.con.cursor(dictionary=True)

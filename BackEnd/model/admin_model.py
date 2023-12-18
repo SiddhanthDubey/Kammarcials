@@ -20,7 +20,7 @@ class Admin:
     def __init__(self):
         try:
             self.con = mysql.connector.connect(host="localhost", user='root', password="",
-                                               database="repnovation")
+                                               database="kammarcials")
             self.con.autocommit = True
             self.cur = self.con.cursor(dictionary=True)
             logger_admin.log_info("Connection Successful")
