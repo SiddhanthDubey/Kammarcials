@@ -27,46 +27,14 @@ class Admin:
         except Exception as e:
             logger_admin.log_error(f"Error during connection: {e}")
 
-    def admin_getall_model(self):
-        try:
-            self.cur.execute('SELECT * FROM users WHERE status = "pending" or status = "alloted"')
-            result = self.cur.fetchall()
-            if len(result) > 0:
-                res = make_response(result, 200)
-                res.headers['Access-Control-Allow-Origin'] = "*"
-                return res
-            else:
-                return make_response({"message": "No data found"}, 204)
-        except Exception as e:
-            logger_admin.log_error(f"Error in admin_getall_model: {e}")
-            return make_response({"message": f"An error occurred while processing your request to get user info to admin : {e}"}, 500)
 
-    def admin_apply_model(self, data):
+    def admin_add_question_model(self, data):
         try:
-            qry = f"UPDATE users SET status='alloted' WHERE id='{data['id']}'"
-            self.cur.execute(qry)
-
-            self.cur.execute(f"select * from users where id='{data['id']}'")
-            result = self.cur.fetchall()
-            result = result[0]
             self.cur.execute(
-                f"INSERT INTO repnovation.admin(name, address, phone, appliances, status) VALUES('{result['name']}', '{result['address']}', '{result['phone']}', '{result['appliances']}', '{result['status']}')")
-
-            return make_response({"message": "You have applied successfully"}, 201)
+                f"INSERT INTO questions(question, option_a, option_b, option_c, option_d) VALUES('{data['question']}', '{data['option_a']}', '{data['option_b']}', '{data['option_c']}', '{data['option_d']}')")
+            logger_admin.log_info(f"Added user: {data}")
+            return make_response({"message": "Question added successfully"}, 201)
         except Exception as e:
-            logger_admin.log_error(f"Error in admin_apply_model: {e}")
-            return make_response({"message": f"An error occurred while processing your request to apply : {e}"}, 500)
-
-    def admin_apply_history_model(self):
-        try:
-            self.cur.execute('SELECT * FROM admin WHERE status="completed" or status="alloted"')
-            result = self.cur.fetchall()
-            if len(result) > 0:
-                res = make_response(result, 200)
-                res.headers['Access-Control-Allow-Origin'] = "*"
-                return res
-            else:
-                return make_response({"message": "No data found"}, 204)
-        except Exception as e:
-            logger_admin.log_error(f"Error in admin_apply_history_model: {e}")
-            return make_response({"message": f"An error occurred while processing your request to get history : {e}"}, 500)
+            logger_admin.log_error(f"Error in user_add_question_model: {e}")
+            return make_response({"message": f"An error occurred while processing your request to add question : {e}"},
+                                 500)
