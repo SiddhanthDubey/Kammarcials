@@ -1,12 +1,12 @@
-from app import app
+from BackEnd.app import app
 from flask import request, send_file, make_response
 import logging
-from controller.error_controller import AppLogger
+from BackEnd.controller.error_controller import AppLogger
 # Configure the logging settings
 
 
-from model.customer_model import Customer
-from model.agent_model import Agent
+from BackEnd.model.customer_model import Customer
+from BackEnd.model.admin_model import Admin
 
 # Configure the logging settings
 
@@ -14,7 +14,7 @@ from model.agent_model import Agent
 logger_controller = AppLogger()
 
 customer = Customer()
-agent = Agent()
+admin = Admin()
 
 @app.route("/user/getall")
 def user_getall_controller():
@@ -48,26 +48,26 @@ def user_delete_controller():
         logger_controller.log_error(f"Error in user_delete_controller: {e}")
         return make_response({"message": "An error occurred while processing your request"}, 500)
 
-@app.route("/agent/getall")
-def agent_getall_controller():
+@app.route("/admin/getall")
+def admin_getall_controller():
     try:
-        return agent.agent_getall_model()
+        return admin.admin_getall_model()
     except Exception as e:
-        logger_controller.log_error(f"Error in agent_getall_controller: {e}")
+        logger_controller.log_error(f"Error in admin_getall_controller: {e}")
         return make_response({"message": "An error occurred while processing your request"}, 500)
 
-@app.route("/agent/apply", methods=["PUT"])
-def agent_apply_controller():
+@app.route("/admin/apply", methods=["PUT"])
+def admin_apply_controller():
     try:
-        return agent.agent_apply_model(request.form)
+        return admin.admin_apply_model(request.form)
     except Exception as e:
-        logger_controller.log_error(f"Error in agent_apply_controller: {e}")
+        logger_controller.log_error(f"Error in admin_apply_controller: {e}")
         return make_response({"message": "An error occurred while processing your request"}, 500)
 
-@app.route("/agent/apply_history", methods=["GET"])
-def agent_apply_history_controller():
+@app.route("/admin/apply_history", methods=["GET"])
+def admin_apply_history_controller():
     try:
-        return agent.agent_apply_history_model()
+        return admin.admin_apply_history_model()
     except Exception as e:
-        logger_controller.log_error(f"Error in agent_apply_history_controller: {e}")
+        logger_controller.log_error(f"Error in admin_apply_history_controller: {e}")
         return make_response({"message": "An error occurred while processing your request"}, 500)
