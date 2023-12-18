@@ -1,7 +1,7 @@
 import mysql.connector
 from flask import make_response
 import logging
-from BackEnd.controller.error_controller import AppLogger
+from controller.error_controller import AppLogger
 '''
 # Configure the logging settings
 logging.basicConfig(
@@ -17,7 +17,7 @@ logger_customer = AppLogger()
 class Customer:
     def __init__(self):
         try:
-            self.con = mysql.connector.connect(host="localhost", user='root', password="",
+            self.con = mysql.connector.connect(host="localhost", user='root', password="9etRufraqe",
                                                database="kammarcials")
             self.con.autocommit = True
             self.cur = self.con.cursor(dictionary=True)

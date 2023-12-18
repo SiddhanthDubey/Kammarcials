@@ -1,12 +1,12 @@
-from BackEnd.app import app
+from app import app
 from flask import request, send_file, make_response
 import logging
-from BackEnd.controller.error_controller import AppLogger
+from controller.error_controller import AppLogger
 # Configure the logging settings
 
 
-from BackEnd.model.customer_model import Customer
-from BackEnd.model.admin_model import Admin
+from model.customer_model import Customer
+from model.admin_model import Admin
 
 # Configure the logging settings
 

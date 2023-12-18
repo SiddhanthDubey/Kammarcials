@@ -1,7 +1,7 @@
 import mysql.connector
 from flask import make_response
 import logging
-from BackEnd.controller.error_controller import AppLogger
+from controller.error_controller import AppLogger
 
 '''
 # Configure the logging settings
@@ -20,7 +20,7 @@ class Admin:
     def __init__(self):
         try:
             self.con = mysql.connector.connect(host="localhost", user='root', password="",
-                                               database="kammarcials")
+                                               database="repnovation")
             self.con.autocommit = True
             self.cur = self.con.cursor(dictionary=True)
             logger_admin.log_info("Connection Successful")
