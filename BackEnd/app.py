@@ -15,58 +15,11 @@ from model.login_reg_model import Login, Register
 # Create a logger instance for your module or script
 logger_controller = AppLogger()
 
-customer = Customer()
+user = Customer()
 admin = Admin()
 login = Login()
 register = Register()
 
-@app.route("/user/getQuestionHistory")
-def user_getall_controller():
-    try:
-        return customer.user_getall_model()
-    except Exception as e:
-        logger_controller.log_error(f"Error in user_getList_controller: {e}")
-        return make_response({"message": "An error occurred while processing your request"}, 500)
-
-@app.route("/user/addone", methods=["POST"])
-def user_addone_controller():
-    try:
-        return customer.user_addone_model(request.form)
-    except Exception as e:
-        logger_controller.log_error(f"Error in user_addone_controller: {e}")
-        return make_response({"message": "An error occurred while processing your request"}, 500)
-
-@app.route("/user/update", methods=["PUT"])
-def user_update_controller():
-    try:
-        return customer.user_update_model(request.form)
-    except Exception as e:
-        logger_controller.log_error(f"Error in user_update_controller: {e}")
-        return make_response({"message": "An error occurred while processing your request"}, 500)
-
-@app.route("/user/delete", methods=["DELETE"])
-def user_delete_controller():
-    try:
-        return customer.user_delete_model(request.form)
-    except Exception as e:
-        logger_controller.log_error(f"Error in user_delete_controller: {e}")
-        return make_response({"message": "An error occurred while processing your request"}, 500)
-
-@app.route("/admin/getall")
-def admin_getall_controller():
-    try:
-        return admin.admin_getall_model()
-    except Exception as e:
-        logger_controller.log_error(f"Error in admin_getall_controller: {e}")
-        return make_response({"message": "An error occurred while processing your request"}, 500)
-
-@app.route("/admin/apply", methods=["PUT"])
-def admin_apply_controller():
-    try:
-        return admin.admin_apply_model(request.form)
-    except Exception as e:
-        logger_controller.log_error(f"Error in admin_apply_controller: {e}")
-        return make_response({"message": "An error occurred while processing your request"}, 500)
 
 @app.route("/login", methods=["GET", "POST"])
 def login_controller():
@@ -95,3 +48,28 @@ def admin_add_question_controller():
         return make_response({"message": "An error occurred while processing your request"}, 500)
 
 
+@app.route("/admin/getallquestions", methods=['GET'])
+def admin_get_all_question_controller():
+    try:
+        return admin.admin_get_all_question_model(request.form)
+    except Exception as e:
+        logger_controller.log_error(f"Error in admin_get_all_question_controller: {e}")
+        return make_response({"message": "An error occurred while processing your request"}, 500)
+
+
+@app.route("/user/profile", methods=['GET'])
+def user_get_profile_controller():
+    try:
+        return user.user_get_profile_model(request.form)
+    except Exception as e:
+        logger_controller.log_error(f"Error in user_get_profile_controller: {e}")
+        return make_response({"message": "An error occurred while processing your request to get profile"}, 500)
+
+
+@app.route("/user/delete", methods=['PUT'])
+def user_delete_profile_controller():
+    try:
+        return user.user_delete_profile_model(request.form)
+    except Exception as e:
+        logger_controller.log_error(f"Error in user_delete_profile_controller: {e}")
+        return make_response({"message": "An error occurred while processing your request to delete profile"}, 500)

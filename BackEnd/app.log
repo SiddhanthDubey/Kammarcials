@@ -1,9 +1,10 @@
-2023-12-19 12:43:07,640 - controller.error_controller - INFO - Connection Successful
-2023-12-19 12:43:07,640 - controller.error_controller - INFO - Connection Successful
-2023-12-19 12:43:07,640 - controller.error_controller - INFO - Connection Successful
-2023-12-19 12:43:07,646 - controller.error_controller - INFO - Connection Successful
-2023-12-19 12:43:07,648 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-12-19 16:51:54,682 - controller.error_controller - INFO - Connection Successful
+2023-12-19 16:51:54,682 - controller.error_controller - INFO - Connection Successful
+2023-12-19 16:51:54,682 - controller.error_controller - INFO - Connection Successful
+2023-12-19 16:51:54,693 - controller.error_controller - INFO - Connection Successful
+2023-12-19 16:51:54,704 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2023-12-19 12:43:07,648 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2023-12-19 12:43:12,150 - controller.error_controller - INFO - User Found: ImmutableMultiDict([('username', 'sid'), ('password', '3333')])
-2023-12-19 12:43:12,151 - werkzeug - INFO - 127.0.0.1 - - [19/Dec/2023 12:43:12] "[35m[1mGET /login HTTP/1.1[0m" 201 -
+2023-12-19 16:51:54,704 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2023-12-19 16:52:08,939 - werkzeug - INFO - 127.0.0.1 - - [19/Dec/2023 16:52:08] "[33mGET / HTTP/1.1[0m" 404 -
+2023-12-19 16:52:12,768 - controller.error_controller - INFO - User Found: ImmutableMultiDict([('username', 'sid'), ('password', '3333')])
+2023-12-19 16:52:12,768 - werkzeug - INFO - 127.0.0.1 - - [19/Dec/2023 16:52:12] "[35m[1mGET /login HTTP/1.1[0m" 201 -

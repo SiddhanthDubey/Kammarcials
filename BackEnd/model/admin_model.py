@@ -27,7 +27,6 @@ class Admin:
         except Exception as e:
             logger_admin.log_error(f"Error during connection: {e}")
 
-
     def admin_add_question_model(self, data):
         try:
             self.cur.execute(
@@ -38,3 +37,6 @@ class Admin:
             logger_admin.log_error(f"Error in user_add_question_model: {e}")
             return make_response({"message": f"An error occurred while processing your request to add question : {e}"},
                                  500)
+
+    def admin_get_all_question_model(self, data):
+        pass

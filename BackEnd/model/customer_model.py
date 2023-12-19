@@ -78,3 +78,10 @@ class Customer:
         except Exception as e:
             logger_customer.log_error(f"Error in user_update_model: {e}")
             return make_response({"message": f"An error occurred while processing your request to update : {e}"}, 500)
+
+
+    def user_get_profile_model(self, data):
+        pass
+
+    def user_delete_profile_model(self, data):
+        pass
