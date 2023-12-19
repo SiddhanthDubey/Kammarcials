@@ -8,6 +8,7 @@ from flask import request, send_file, make_response
 
 from model.customer_model import Customer
 from model.admin_model import Admin
+from model.login_reg_model import Login, Register
 
 # Configure the logging settings
 
@@ -16,8 +17,10 @@ logger_controller = AppLogger()
 
 customer = Customer()
 admin = Admin()
+login = Login()
+register = Register()
 
-@app.route("/user/getall")
+@app.route("/user/getQuestionHistory")
 def user_getall_controller():
     try:
         return customer.user_getall_model()
@@ -65,12 +68,21 @@ def admin_apply_controller():
         logger_controller.log_error(f"Error in admin_apply_controller: {e}")
         return make_response({"message": "An error occurred while processing your request"}, 500)
 
-@app.route("/admin/apply_history", methods=["GET"])
-def admin_apply_history_controller():
+@app.route("/login", methods=["GET", "POST"])
+def login_controller():
     try:
-        return admin.admin_apply_history_model()
+        return login.login_model(request.form)
     except Exception as e:
-        logger_controller.log_error(f"Error in admin_apply_history_controller: {e}")
+        logger_controller.log_error(f"Error in login_controller: {e}")
+        return make_response({"message": "An error occurred while processing your request"}, 500)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register_controller():
+    try:
+        return register.register_model(request.form)
+    except Exception as e:
+        logger_controller.log_error(f"Error in login_controller: {e}")
         return make_response({"message": "An error occurred while processing your request"}, 500)
 
 
