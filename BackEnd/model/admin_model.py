@@ -3,15 +3,6 @@ from flask import make_response
 import logging
 from controller.error_controller import AppLogger
 
-'''
-# Configure the logging settings
-logging.basicConfig(
-    level=logging.DEBUG,  # Set the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  # Define the log message format
-    #filename='admin.log',  # Specify the log file
-    filemode='w'  # Set the file mode ('w' for write, 'a' for append)
-)
-'''
 # Create a logger instance for your module or script
 logger_admin = AppLogger()
 
@@ -39,4 +30,16 @@ class Admin:
                                  500)
 
     def admin_get_all_question_model(self, data):
-        pass
+        try:
+            self.cur.execute(f"SELECT * FROM questions WHERE adminid={data['id']}")
+            result = self.cur.fetchall()
+            if len(result) > 0:
+                res = make_response(result, 200)
+                res.headers['Access-Control-Allow-Origin'] = "*"
+                return res
+            else:
+                return make_response({"message": "No data found"}, 204)
+        except Exception as e:
+            logger_admin.log_error(f"Error in admin_get_all_question_model: {e}")
+            return make_response(
+                {"message": f"An error occurred while processing your request to get all questions : {e}"}, 500)

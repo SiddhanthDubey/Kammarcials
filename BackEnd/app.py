@@ -1,10 +1,10 @@
 from controller.error_controller import AppLogger
 from flask import Flask
+
 # dont import here, import user_controller below app = Flask declaration
 app = Flask(__name__)
 
 from flask import request, send_file, make_response
-
 
 from model.customer_model import Customer
 from model.admin_model import Admin
@@ -21,7 +21,7 @@ login = Login()
 register = Register()
 
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET"])
 def login_controller():
     try:
         return login.login_model(request.form)
@@ -66,10 +66,19 @@ def user_get_profile_controller():
         return make_response({"message": "An error occurred while processing your request to get profile"}, 500)
 
 
-@app.route("/user/delete", methods=['PUT'])
+@app.route("/user/delete", methods=['GET', 'PUT'])
 def user_delete_profile_controller():
     try:
         return user.user_delete_profile_model(request.form)
+    except Exception as e:
+        logger_controller.log_error(f"Error in user_delete_profile_controller: {e}")
+        return make_response({"message": "An error occurred while processing your request to delete profile"}, 500)
+
+
+@app.route("/user/profileupdate", methods=['GET', 'PUT'])
+def user_update_profile_controller():
+    try:
+        return user.user_update_profile_model(request.form)
     except Exception as e:
         logger_controller.log_error(f"Error in user_delete_profile_controller: {e}")
         return make_response({"message": "An error occurred while processing your request to delete profile"}, 500)

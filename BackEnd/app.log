@@ -1,7 +1,12 @@
-2023-12-19 18:12:57,468 - controller.error_controller - INFO - Connection Successful
-2023-12-19 18:12:57,472 - controller.error_controller - INFO - Connection Successful
-2023-12-19 18:12:57,472 - controller.error_controller - INFO - Connection Successful
-2023-12-19 18:12:57,479 - controller.error_controller - INFO - Connection Successful
-2023-12-19 18:12:57,483 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-12-20 20:28:35,878 - controller.error_controller - INFO - Connection Successful
+2023-12-20 20:28:35,880 - controller.error_controller - INFO - Connection Successful
+2023-12-20 20:28:35,884 - controller.error_controller - INFO - Connection Successful
+2023-12-20 20:28:35,884 - controller.error_controller - INFO - Connection Successful
+2023-12-20 20:28:35,892 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2023-12-19 18:12:57,483 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2023-12-20 20:28:35,892 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2023-12-20 20:28:39,494 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2023 20:28:39] "GET /login HTTP/1.1" 200 -
+2023-12-20 20:28:50,194 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2023 20:28:50] "GET /login HTTP/1.1" 200 -
+2023-12-20 20:29:07,358 - controller.error_controller - INFO - Added user with ID 13: ImmutableMultiDict([('username', 'aaa'), ('password', 'ddd')])
+2023-12-20 20:29:07,358 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2023 20:29:07] "[35m[1mGET /register HTTP/1.1[0m" 201 -
+2023-12-20 20:29:13,991 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2023 20:29:13] "GET /login HTTP/1.1" 200 -

@@ -21,18 +21,22 @@ class Login:
 
     def login_model(self, data):
         try:
-            self.cur.execute(
-                "SELECT id FROM users WHERE username = %s AND password = %s",
-                (data['username'], data['password'])
-            )
-            user_id = self.cur.fetchone()  # Fetch the first result
-            if user_id:
-                logger_login.log_info(f"User Found: {data}")
-                return make_response({"message": "Login Successful", "id": user_id['id']}, 201)
+            # Use parameterized query to prevent SQL injection
+            self.cur.execute("SELECT id FROM users WHERE username = %s AND password = %s",
+                             (data['username'], data['password']))
+
+            # Fetch the result
+            result = self.cur.fetchone()
+
+            if result:
+                # Successful login
+                return make_response({"message": "Login successful","id":result['id']}, 200)
             else:
-                logger_login.log_info(f"User not found: {data}")
+                # Invalid credentials
                 return make_response({"message": "Invalid username or password"}, 401)
+
         except Exception as e:
+            # Log the error
             logger_login.log_error(f"Error in login_model: {e}")
             return make_response({"message": f"An error occurred while processing your request to Login: {e}"}, 500)
 
