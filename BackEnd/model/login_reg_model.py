@@ -1,7 +1,18 @@
 import mysql.connector
 from flask import make_response
 import logging
-from controller.error_controller import AppLogger
+
+
+class AppLogger:
+    def __init__(self, log_file='login_reg.log'):
+        logging.basicConfig(filename=log_file, level=logging.INFO)
+        self.logger = logging.getLogger()
+
+    def log_info(self, message):
+        self.logger.info(message)
+
+    def log_error(self, message):
+        self.logger.error(message)
 
 
 # Create a logger instance for your module or script
@@ -30,7 +41,7 @@ class Login:
 
             if result:
                 # Successful login
-                return make_response({"message": "Login successful","id":result['id']}, 200)
+                return make_response({"message": "Login successful", "id": result['id']}, 200)
             else:
                 # Invalid credentials
                 return make_response({"message": "Invalid username or password"}, 401)

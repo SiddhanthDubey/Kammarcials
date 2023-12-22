@@ -1,7 +1,19 @@
 import mysql.connector
 from flask import make_response
 import logging
-from controller.error_controller import AppLogger
+
+
+class AppLogger:
+    def __init__(self, log_file='customer.log'):
+        logging.basicConfig(filename=log_file, level=logging.INFO)
+        self.logger = logging.getLogger()
+
+    def log_info(self, message):
+        self.logger.info(message)
+
+    def log_error(self, message):
+        self.logger.error(message)
+
 
 # Create a logger instance for your module or script
 logger_customer = AppLogger()
