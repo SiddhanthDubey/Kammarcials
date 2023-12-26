@@ -3,13 +3,12 @@ INFO:root:Connection Successful
 INFO:root:Connection Successful
 INFO:root:Connection Successful
 INFO:root:Connection Successful
-INFO:root:Number of users: 2
-INFO:root:Number of users: 2
-INFO:root:Number of users: 2
-INFO:root:Number of users: 2
-INFO:root:Number of users: 2
-INFO:root:Number of users: 2
-INFO:root:Number of users: 2
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Dec/2023 10:31:49] "OPTIONS /login HTTP/1.1" 200 -
+ERROR:root:Error in login_model: byte indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [26/Dec/2023 10:31:49] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
 INFO:root:Connection Successful
 INFO:root:Connection Successful
 INFO:root:Connection Successful
@@ -18,6 +17,7 @@ INFO:root:Connection Successful
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:root:Added user with ID 14: ImmutableMultiDict([('username', 'fff'), ('password', 'fff')])
-INFO:werkzeug:127.0.0.1 - - [22/Dec/2023 23:32:11] "[35m[1mGET /register HTTP/1.1[0m" 201 -
-INFO:werkzeug:127.0.0.1 - - [22/Dec/2023 23:32:23] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Dec/2023 10:34:25] "OPTIONS /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Dec/2023 10:34:25] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Dec/2023 10:41:32] "OPTIONS /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Dec/2023 10:41:32] "POST /login HTTP/1.1" 200 -

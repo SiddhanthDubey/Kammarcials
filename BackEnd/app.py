@@ -9,6 +9,9 @@ from model.coupon_model import Coupon
 from model.customer_model import Customer
 from model.dev_model import Dev
 from model.login_reg_model import Login, Register
+from flask_cors import CORS
+
+
 
 
 class AppLogger:
@@ -24,6 +27,7 @@ class AppLogger:
 
 
 app = Flask(__name__)
+CORS(app)
 # Configure the logging settings
 
 # Create a logger instance for your module or script
@@ -36,10 +40,10 @@ register = Register()
 coupon = Coupon()
 
 
-@app.route("/login", methods=["GET"])
+@app.route("/login", methods=["POST"])
 def login_controller():
     try:
-        return login.login_model(request.form)
+        return login.login_model(request.data)
     except Exception as e:
         logger_controller.log_error(f"Error in login_controller: {e}")
         return make_response({"message": "An error occurred while processing your request"}, 500)

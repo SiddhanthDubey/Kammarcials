@@ -1,6 +1,8 @@
 import mysql.connector
 from flask import make_response
 import logging
+import json
+import flask.json
 
 
 class AppLogger:
@@ -31,10 +33,12 @@ class Login:
             logger_login.log_error(f"Error during connection: {e}")
 
     def login_model(self, data):
+        print(data)
         try:
+            decoded_data = json.loads(data.decode('utf-8'))
             # Use parameterized query to prevent SQL injection
             self.cur.execute("SELECT id FROM users WHERE username = %s AND password = %s",
-                             (data['username'], data['password']))
+                             (decoded_data['username'], decoded_data['password']))
 
             # Fetch the result
             result = self.cur.fetchone()
@@ -66,7 +70,8 @@ class Register:
     def register_model(self, data):
         try:
             self.cur.execute(
-                f"INSERT INTO users(username, password) VALUES('{data['username']}', '{data['password']}')")
+                "INSERT INTO users(username, password) VALUES(%s, %s)",
+                (data['"username"'], data['"password"']))
             user_id = self.cur.lastrowid  # Get the ID of the last inserted row
             logger_login.log_info(f"Added user with ID {user_id}: {data}")
             return make_response({"message": "User registered successfully", "user_id": user_id}, 201)
