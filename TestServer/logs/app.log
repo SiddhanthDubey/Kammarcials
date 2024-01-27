@@ -1,0 +1,77 @@
+[2024-01-27 16:20:25,627] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:20:25,889] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:20:25,893] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:20:25,897] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:22:09,084] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:22:09,338] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:22:09,342] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:22:09,346] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:23:13,093] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:23:13,124] [INFO] [coupon.py:15] Connection Successful
+[2024-01-27 16:23:13,349] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:23:13,354] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:23:13,358] [INFO] [survey.py:15] Connection Successful
+[2024-01-27 16:23:20,884] [ERROR] [survey.py:26] Error in survey_model: 1054 (42S22): Unknown column 'id' in 'field list'
+[2024-01-27 16:23:20,885] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:24:00,000] [ERROR] [survey.py:26] Error in survey_model: 1054 (42S22): Unknown column 'id' in 'field list'
+[2024-01-27 16:24:00,001] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:24:00,581] [ERROR] [survey.py:26] Error in survey_model: 1054 (42S22): Unknown column 'id' in 'field list'
+[2024-01-27 16:24:00,582] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:24:16,313] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:24:16,337] [INFO] [coupon.py:15] Connection Successful
+[2024-01-27 16:24:16,563] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:24:16,567] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:24:16,571] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:24:20,232] [INFO] [survey.py:22] Survey questions fetched
+[2024-01-27 16:24:20,232] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:24:59,565] [INFO] [survey.py:22] Survey questions fetched
+[2024-01-27 16:24:59,566] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:25:05,592] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:25:05,617] [INFO] [coupon.py:15] Connection Successful
+[2024-01-27 16:25:05,845] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:25:05,849] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:25:05,854] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:25:07,616] [INFO] [survey.py:22] Survey questions fetched
+[2024-01-27 16:25:07,616] [ERROR] [survey.py:25] Error in survey_model: list indices must be integers or slices, not str
+[2024-01-27 16:25:07,617] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:26:54,339] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:26:54,366] [INFO] [coupon.py:15] Connection Successful
+[2024-01-27 16:26:54,593] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:26:54,598] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:26:54,603] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:27:06,151] [INFO] [survey.py:26] Survey questions fetched
+[2024-01-27 16:27:06,152] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:28:36,300] [INFO] [survey.py:26] Survey questions fetched
+[2024-01-27 16:28:36,301] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:29:07,253] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:29:07,279] [INFO] [coupon.py:15] Connection Successful
+[2024-01-27 16:29:07,497] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:29:07,502] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:29:07,506] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:29:11,165] [INFO] [survey.py:26] Survey questions fetched
+[2024-01-27 16:29:11,165] [INFO] [survey_controller.py:13] Survey questions fetched
+[2024-01-27 16:35:57,191] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:35:57,215] [INFO] [coupon.py:15] Connection Successful
+[2024-01-27 16:35:57,433] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:35:57,438] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:35:57,443] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:36:00,182] [INFO] [survey.py:28] Survey questions fetched
+[2024-01-27 16:37:10,713] [INFO] [server_logger.py:26] Logger initialized
+[2024-01-27 16:37:10,738] [INFO] [coupon.py:15] Connection Successful
+[2024-01-27 16:37:10,963] [INFO] [login.py:23] Connection Successful
+[2024-01-27 16:37:10,967] [INFO] [register.py:18] Connection Successful
+[2024-01-27 16:37:10,971] [INFO] [survey.py:14] Connection Successful
+[2024-01-27 16:37:15,353] [ERROR] [app.py:825] Exception on /survey [GET]
+Traceback (most recent call last):
+  File "C:\Users\Sidha\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sidha\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sidha\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 889, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sidha\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1161, in make_response
+    raise TypeError(
+TypeError: The view function for 'survey_controller' did not return a valid response. The function either returned None or ended without a return statement.
