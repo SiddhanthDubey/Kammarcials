@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "kammarcialsFront",
+    "slug": "kammarcialsFront",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
