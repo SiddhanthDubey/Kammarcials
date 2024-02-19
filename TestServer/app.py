@@ -10,6 +10,7 @@ CORS(app)
 # Set your secret key
 app.config['SECRET_KEY'] = '9etRufraqe'
 
+
 # Configure Flask-Session
 app.config['SESSION_TYPE'] = 'filesystem'  # Use filesystem as the session storage
 app.config['SESSION_PERMANENT'] = False  # Session is not permanent
@@ -40,7 +41,3 @@ from controller import survey_controller
 #from controller import coupon_controller
 
 #coupon = coupon_controller.Coupon()
-
-
-def run_flask_app():
-    app.run(debug=True, use_reloader=False, port=5000, host='127.0.0.1')

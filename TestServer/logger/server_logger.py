@@ -2,6 +2,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 import os
 from flask import Flask
+import time
 
 
 def setup_logger(app: Flask):
@@ -10,7 +11,9 @@ def setup_logger(app: Flask):
     if not os.path.exists(log_folder):
         os.mkdir(log_folder)
 
-    log_file = os.path.join(log_folder, 'app.log')
+    file_location = str(time.time()) + ".log"
+
+    log_file = os.path.join(log_folder, file_location)
 
     formatter = logging.Formatter(
         "[%(asctime)s] [%(levelname)s] [%(filename)s:%(lineno)d] %(message)s"

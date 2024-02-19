@@ -1,0 +1,6 @@
+[2024-02-05 11:05:52,465] [INFO] [server_logger.py:29] Logger initialized
+[2024-02-05 11:05:52,522] [INFO] [login.py:23] Connection Successful
+[2024-02-05 11:05:52,531] [INFO] [register.py:18] Connection Successful
+[2024-02-05 11:05:52,538] [INFO] [survey.py:14] Connection Successful
+[2024-02-05 11:06:02,199] [INFO] [login.py:39] Successful login for user: aaa
+[2024-02-05 11:06:02,201] [INFO] [login_controller.py:16] Login successful

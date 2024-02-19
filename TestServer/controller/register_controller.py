@@ -4,10 +4,22 @@ from model.register import Register
 
 register = Register()
 
+
+@app.route("/google_register", methods=["POST"])
+def google_register_controller():
+    try:
+        result = register.google_register_model(request.form)
+        app.logger.info("User registration successful")  # Add an appropriate log message
+        return result
+    except Exception as e:
+        app.logger.error(f"Error in google_register_controller: {str(e)}")
+        return make_response({"message": "An error occurred while processing your request"}, 500)
+
+
 @app.route("/register", methods=["POST"])
 def register_controller():
     try:
-        result = register.register_model(request.data)
+        result = register.register_model(request.form)
         app.logger.info("User registration successful")  # Add an appropriate log message
         return result
     except Exception as e:
