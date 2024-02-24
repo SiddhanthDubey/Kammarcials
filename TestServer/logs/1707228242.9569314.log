@@ -1,7 +1,0 @@
-[2024-02-06 19:34:02,957] [INFO] [server_logger.py:29] Logger initialized
-[2024-02-06 19:34:02,980] [INFO] [login.py:23] Connection Successful
-[2024-02-06 19:34:02,984] [INFO] [register.py:18] Connection Successful
-[2024-02-06 19:34:02,990] [INFO] [survey.py:14] Connection Successful
-[2024-02-06 19:34:13,564] [INFO] [login.py:39] Successful login for user: sss
-[2024-02-06 19:34:13,565] [INFO] [login_controller.py:16] Login successful
-[2024-02-06 19:34:17,673] [INFO] [survey.py:30] Survey questions fetched

@@ -26,13 +26,12 @@ class Login:
 
     def login_model(self, data):
         try:
-            # decoded_data = json.loads(data)
-            encrypted_password = encryption.encrypt(data['password'])
+            decoded_data = data
+            encrypted_password = encryption.encrypt(decoded_data['password'])
             self.cur.execute("SELECT id, age FROM users WHERE username = %s AND password = %s",
-                             (data['username'], encrypted_password))
+                             (decoded_data['username'], encrypted_password))
 
             result = self.cur.fetchall()
-
             if result:
                 user_id = result[0]['id']  # Access the 'id' field of the first row
                 user_age = result[0]['age']  # Access the 'age' field of the first row
@@ -42,10 +41,10 @@ class Login:
                 session['user_id'] = user_id
                 session['age'] = user_age
                 return make_response(
-                    {"message": "Login successful", "username": data['username'], "user_id": user_id}, 200)
+                    {"message": "Login successful", "username": decoded_data['username'], "user_id": user_id}, 200)
             else:
-                app.logger.warning(f"Invalid login attempt for user: {data['username']}")
-                return make_response({"message": "Invalid username or password"}, 200)
+                app.logger.warning(f"Invalid login attempt for user: {decoded_data['username']}")
+                return make_response({"message": "Invalid username or password"}, 201)
         except Exception as e:
             app.logger.error(f"Error in login_model: {e}")
             return make_response({"message": f"An error occurred while processing your request to Login: {e}"}, 500)

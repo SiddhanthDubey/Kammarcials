@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginPage(),
-        '/dashboard': (context) => MyApp(),
+        '/dashboard': (context) =>
+            MyHomePage(), // Update to navigate to MyHomePage (Dashboard)
       },
     );
   }

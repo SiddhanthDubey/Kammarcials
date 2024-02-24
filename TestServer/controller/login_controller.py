@@ -1,5 +1,5 @@
 from flask import Flask, session, abort, redirect, request, make_response, jsonify
-
+import json
 from app import app
 from model.login import Login
 
@@ -12,7 +12,8 @@ login = Login()
 @app.route("/login", methods=["POST"])
 def login_controller():
     try:
-        result = login.login_model(request.form)
+        data = json.loads(request.data.decode("utf-8"))  # Decode bytes to string and parse JSON
+        result = login.login_model(data)
         app.logger.info("Login successful")
 
         return result

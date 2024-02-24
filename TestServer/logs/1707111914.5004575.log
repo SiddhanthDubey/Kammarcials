@@ -1,9 +1,0 @@
-[2024-02-05 11:15:14,501] [INFO] [server_logger.py:29] Logger initialized
-[2024-02-05 11:15:14,552] [INFO] [login.py:23] Connection Successful
-[2024-02-05 11:15:14,559] [INFO] [register.py:18] Connection Successful
-[2024-02-05 11:15:14,568] [INFO] [survey.py:14] Connection Successful
-[2024-02-05 11:15:19,957] [INFO] [login.py:39] Successful login for user: sss
-[2024-02-05 11:15:19,959] [INFO] [login_controller.py:16] Login successful
-[2024-02-05 11:15:24,807] [INFO] [survey.py:32] Survey questions fetched
-[2024-02-05 11:15:27,562] [INFO] [survey.py:55] {'surveyid': 23423423, 'q1': '1', 'q2': '2', 'q3': '3', 'q4': '4', 'q5': '5', 'q6': '6', 'q7': '7', 'q8': '8', 'q9': '9', 'q10': '10', 'q11': '11', 'q12': '12'}
-[2024-02-05 11:15:27,578] [INFO] [survey.py:61] Survey questions fetched

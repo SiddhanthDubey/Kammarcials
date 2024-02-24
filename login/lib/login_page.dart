@@ -8,41 +8,55 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   Future<void> _login() async {
-    final String username = _usernameController.text;
-    final String password = _passwordController.text;
+    try {
+      final String apiUrl =
+          "http://10.0.2.2:5000/login"; // Replace with your Flask backend URL
 
-    // Simulate sending login credentials to a backend server
-    final response = await http.get(Uri.parse('/lib/users.json'));
-    final List<dynamic> users = json.decode(response.body);
+      final Map<String, dynamic> data = {
+        "username": usernameController.text,
+        "password": passwordController.text,
+      };
 
-    final user = users.firstWhere(
-      (user) => user['username'] == username && user['password'] == password,
-      orElse: () => null,
-    );
-
-    if (user != null) {
-      // Navigate to dashboard page
-      Navigator.pushReplacementNamed(context, '/dashboard');
-    } else {
-      // Show error message
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text('Error'),
-          content: Text('Invalid username or password'),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text('OK'),
-            ),
-          ],
-        ),
+      final http.Response response = await http.post(
+        Uri.parse(apiUrl),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: json.encode(data),
       );
+
+      if (response.statusCode == 200) {
+        // Successful login, navigate to the dashboard
+        Navigator.pushReplacementNamed(context, '/dashboard');
+      } else {
+        // Handle login failure
+        _showErrorDialog("Login Failed");
+      }
+    } catch (e) {
+      // Log and handle the error
+      print("Error during login: $e");
+      _showErrorDialog("Error during login: $e");
     }
+  }
+
+  void _showErrorDialog(String message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Error'),
+        content: Text(message),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('OK'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -55,12 +69,12 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextField(
-              controller: _usernameController,
+              controller: usernameController,
               decoration: InputDecoration(labelText: 'Username'),
             ),
             SizedBox(height: 20),
             TextField(
-              controller: _passwordController,
+              controller: passwordController,
               obscureText: true,
               decoration: InputDecoration(labelText: 'Password'),
             ),
