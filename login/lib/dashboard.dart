@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key});
@@ -10,8 +9,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  late String username;
+
   @override
   Widget build(BuildContext context) {
+    // Extract username from arguments
+    final Map<String, dynamic>? args =
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+
+    if (args != null && args.containsKey('username')) {
+      username = args['username'];
+    } else {
+      username = 'Guest'; // Default value if username is not provided
+    }
+
     return Scaffold(
       body: ListView(
         padding: EdgeInsets.zero,
@@ -28,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(height: 50),
                 ListTile(
                   contentPadding: const EdgeInsets.symmetric(horizontal: 30),
-                  title: Text('Hello Aditya!',
+                  title: Text('Hello $username!',
                       style: TextStyle(fontSize: 24, color: Colors.white)),
                   subtitle: Text('Good Morning',
                       style: TextStyle(fontSize: 18, color: Colors.white54)),
@@ -56,22 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisSpacing: 40,
                 mainAxisSpacing: 30,
                 children: [
-                  itemDashboard(
-                      context,
-                      'MySurveys',
-                      CupertinoIcons.play_rectangle,
-                      Colors.deepOrange,
-                      '/mysurveys'),
-                  itemDashboard(context, 'Analytics',
-                      CupertinoIcons.graph_circle, Colors.green, '/analytics'),
-                  itemDashboard(
-                      context,
-                      'My Copun',
-                      CupertinoIcons.money_dollar_circle,
-                      Colors.indigo,
-                      '/mycopun'),
-                  itemDashboard(context, 'About',
-                      CupertinoIcons.question_circle, Colors.blue, '/about'),
+                  // ... existing code ...
                 ],
               ),
             ),

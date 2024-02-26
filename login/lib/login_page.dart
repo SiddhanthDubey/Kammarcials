@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:login/signup.dart';
+import 'dashboard.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -13,8 +15,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> _login() async {
     try {
-      final String apiUrl =
-          "http://10.0.2.2:5000/login"; // Replace with your Flask backend URL
+      final String apiUrl = "http://10.0.2.2:5000/login";
 
       final Map<String, dynamic> data = {
         "username": usernameController.text,
@@ -30,8 +31,12 @@ class _LoginPageState extends State<LoginPage> {
       );
 
       if (response.statusCode == 200) {
-        // Successful login, navigate to the dashboard
-        Navigator.pushReplacementNamed(context, '/dashboard');
+        // Successful login, navigate to the dashboard with username
+        Navigator.pushReplacementNamed(
+          context,
+          '/dashboard',
+          arguments: {'username': usernameController.text},
+        );
       } else {
         // Handle login failure
         _showErrorDialog("Login Failed");
@@ -82,6 +87,17 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton(
               onPressed: _login,
               child: Text('Login'),
+            ),
+            SizedBox(height: 10),
+            TextButton(
+              onPressed: () {
+                // Navigate to SignUpPage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
+              },
+              child: Text('Don\'t have an account? Sign Up'),
             ),
           ],
         ),

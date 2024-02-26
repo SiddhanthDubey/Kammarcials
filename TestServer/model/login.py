@@ -15,7 +15,7 @@ class Login:
     def __init__(self):
         # self.coupon_thread = None
         try:
-            self.con = mysql.connector.connect(host="localhost", user='root', password="",
+            self.con = mysql.connector.connect(host="localhost", user='root', password="1234567890",
                                                database="kammarcials")
             self.con.autocommit = True
             self.cur = self.con.cursor(dictionary=True)
