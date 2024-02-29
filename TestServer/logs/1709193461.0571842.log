@@ -7,3 +7,4 @@
 [2024-02-29 13:30:07,386] [INFO] [register.py:46] Added user with ID 48
 [2024-02-29 13:30:07,387] [INFO] [register_controller.py:24] User registration successful
 [2024-02-29 13:30:17,417] [INFO] [login.py:38] Successful login for user: ff@ff.ff
+[2024-02-29 13:30:17,419] [INFO] [login_controller.py:17] Login successful
