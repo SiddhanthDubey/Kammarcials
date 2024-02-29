@@ -1,0 +1,12 @@
+[2024-02-29 13:15:49,692] [INFO] [server_logger.py:29] Logger initialized
+[2024-02-29 13:15:49,723] [INFO] [login.py:23] Connection Successful
+[2024-02-29 13:15:49,727] [INFO] [register.py:18] Connection Successful
+[2024-02-29 13:15:49,732] [INFO] [survey.py:14] Connection Successful
+[2024-02-29 13:16:15,617] [ERROR] [login.py:49] Error in login_model: 'email'
+[2024-02-29 13:16:15,618] [INFO] [login_controller.py:17] Login successful
+[2024-02-29 13:18:14,261] [ERROR] [login.py:49] Error in login_model: 'email'
+[2024-02-29 13:18:14,261] [INFO] [login_controller.py:17] Login successful
+[2024-02-29 13:18:19,096] [ERROR] [login.py:49] Error in login_model: 'email'
+[2024-02-29 13:18:19,096] [INFO] [login_controller.py:17] Login successful
+[2024-02-29 13:19:25,651] [ERROR] [login.py:49] Error in login_model: 'username'
+[2024-02-29 13:19:25,652] [INFO] [login_controller.py:17] Login successful

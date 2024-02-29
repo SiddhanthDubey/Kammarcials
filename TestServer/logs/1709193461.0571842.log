@@ -1,0 +1,9 @@
+[2024-02-29 13:27:41,057] [INFO] [server_logger.py:29] Logger initialized
+[2024-02-29 13:27:41,082] [INFO] [login.py:23] Connection Successful
+[2024-02-29 13:27:41,087] [INFO] [register.py:18] Connection Successful
+[2024-02-29 13:27:41,090] [INFO] [survey.py:14] Connection Successful
+[2024-02-29 13:28:27,673] [INFO] [register.py:46] Added user with ID 47
+[2024-02-29 13:28:27,673] [INFO] [register_controller.py:24] User registration successful
+[2024-02-29 13:30:07,386] [INFO] [register.py:46] Added user with ID 48
+[2024-02-29 13:30:07,387] [INFO] [register_controller.py:24] User registration successful
+[2024-02-29 13:30:17,417] [INFO] [login.py:38] Successful login for user: ff@ff.ff

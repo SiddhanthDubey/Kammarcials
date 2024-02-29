@@ -16,7 +16,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Future<void> _signUp() async {
     try {
-      final String apiUrl = "http://10.0.2.2:5000/signup"; // Replace with your actual signup API URL
+      final String apiUrl =
+          "http://10.0.2.2:5000/register"; // Replace with your actual signup API URL
 
       final Map<String, dynamic> data = {
         "email": emailController.text,
@@ -33,6 +34,11 @@ class _SignUpPageState extends State<SignUpPage> {
       if (response.statusCode == 200) {
         // Handle successful signup (e.g., show success message or navigate to another page)
         print("Signup successful!");
+        // Redirect to login page
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => LoginPage()),
+        );
       } else {
         // Handle signup failure (e.g., show error message)
         _showErrorDialog("Signup failed: ${response.body}");

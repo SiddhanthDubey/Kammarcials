@@ -24,8 +24,8 @@ class Register:
             # decoded_data = json.loads(data) also put request.data in controller
             # encrypted_password = encryption.encrypt(decoded_data['password'])
             self.cur.execute(
-                "INSERT INTO google_users(username, email, mobile, age) VALUES(%s, %s, %s, %s)",
-                (data['username'], data['email'], data['mobile'], data['age']))
+                "INSERT INTO google_users(email, mobile, age) VALUES(%s, %s, %s)",
+                (data['email'], data['mobile'], data['age']))
             user_id = self.cur.lastrowid  # Get the ID of the last inserted row
             app.logger.info(f"Added user with ID {user_id}")
             return make_response({"message": "User registered successfully", "user_id": user_id}, 201)
@@ -38,13 +38,13 @@ class Register:
             # decoded_data = json.loads(data) also put request.data in controller
             encrypted_password = encryption.encrypt(data['password'])
             self.cur.execute(
-                "INSERT INTO users(username, password, email, age) VALUES(%s, %s, %s, %s)",
-                (data['username'], encrypted_password, data['email'], data['age'])
+                "INSERT INTO users(password, email, age) VALUES(%s, %s, %s)",
+                (encrypted_password, data['email'], data['age'])
             )
 
             user_id = self.cur.lastrowid  # Get the ID of the last inserted row
             app.logger.info(f"Added user with ID {user_id}")
-            return make_response({"message": "User registered successfully", "user_id": user_id}, 201)
+            return make_response({"message": "User registered successfully", "user_id": user_id}, 200)
         except Exception as e:
             app.logger.error(f"Error in register_model: {e}")
             return make_response({"message": f"An error occurred while processing your request to register: {e}"}, 500)

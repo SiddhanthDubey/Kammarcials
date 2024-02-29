@@ -1,5 +1,5 @@
 from app import app
-from flask import request, make_response
+from flask import request, make_response, json
 from model.register import Register
 
 register = Register()
@@ -19,7 +19,8 @@ def google_register_controller():
 @app.route("/register", methods=["POST"])
 def register_controller():
     try:
-        result = register.register_model(request.form)
+        data = json.loads(request.data.decode("utf-8"))
+        result = register.register_model(data)
         app.logger.info("User registration successful")  # Add an appropriate log message
         return result
     except Exception as e:

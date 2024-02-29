@@ -10,7 +10,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   Future<void> _login() async {
@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
       final String apiUrl = "http://10.0.2.2:5000/login";
 
       final Map<String, dynamic> data = {
-        "username": usernameController.text,
+        "email": emailController.text,
         "password": passwordController.text,
       };
 
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.pushReplacementNamed(
           context,
           '/dashboard',
-          arguments: {'username': usernameController.text},
+          arguments: {'email': emailController.text},
         );
       } else {
         // Handle login failure
@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextField(
-              controller: usernameController,
+              controller: emailController,
               decoration: InputDecoration(labelText: 'Username'),
             ),
             SizedBox(height: 20),
