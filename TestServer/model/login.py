@@ -26,25 +26,30 @@ class Login:
 
     def login_model(self, data):
         try:
-            decoded_data = data
-            encrypted_password = encryption.encrypt(decoded_data['password'])
-            self.cur.execute("SELECT id, age FROM users WHERE email = %s AND password = %s",
-                             (decoded_data['email'], encrypted_password))
+            session.clear()
+            encrypted_password = encryption.encrypt(data['password'])
+            self.cur.execute("SELECT id, age, password FROM users WHERE email = %s", (data['email'],))
 
             result = self.cur.fetchall()
             if result:
-                user_id = result[0]['id']  # Access the 'id' field of the first row
-                user_age = result[0]['age']  # Access the 'age' field of the first row
-                app.logger.info(f"Successful login for user: {data['email']}")
+                if result[0]['password'] == encrypted_password:
+                    user_id = result[0]['id']  # Access the 'id' field of the first row
+                    user_age = result[0]['age']
+                    # Access the 'age' field of the first row
+                    app.logger.info(f"Successful login for user: {data['email']}")
 
-                # Store user_id & age in the session
-                session['user_id'] = user_id
-                session['age'] = user_age
-                return make_response(
-                    {"message": "Login successful", "email": decoded_data['email'], "user_id": user_id}, 200)
+                    # Store user_id & age in the session
+                    session['user_id'] = user_id
+                    session['age'] = user_age
+                    app.logger.info((session.get('age'), session.get('user_id')))
+                    return make_response(
+                        {"message": "Login successful", "email": data['email'], "user_id": user_id}, 200)
+                else:
+                    app.logger.warning(f"Invalid login attempt for email: {data['email']}")
+                    return make_response({"message": "Invalid Password"}, 201)
             else:
-                app.logger.warning(f"Invalid login attempt for user: {decoded_data['email']}")
-                return make_response({"message": "Invalid username or password"}, 201)
+                app.logger.warning(f"Invalid login attempt with email: {data['email']}")
+                return make_response({"message": "Invalid email"}, 201)
         except Exception as e:
             app.logger.error(f"Error in login_model: {e}")
             return make_response({"message": f"An error occurred while processing your request to Login: {e}"}, 500)

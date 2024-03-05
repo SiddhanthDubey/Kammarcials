@@ -1,5 +1,4 @@
-from flask import Flask, session, abort, redirect, request, make_response, jsonify
-
+from flask import request, make_response
 from app import app
 from model.survey import Survey
 
@@ -33,3 +32,4 @@ def survey_submission_controller():
         return survey.survey_submission_model(request.form)
     except Exception as e:
         app.logger.error(f"Error in submit_survey_controller: {str(e)}")
+        return make_response({"message": "An error occurred while processing your request"}, 500)

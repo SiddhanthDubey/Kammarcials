@@ -1,4 +1,0 @@
-[2024-02-24 18:21:22,730] [INFO] [server_logger.py:29] Logger initialized
-[2024-02-24 18:21:22,945] [ERROR] [login.py:25] Error during connection: 1049 (42000): Unknown database 'kammarcials'
-[2024-02-24 18:21:22,954] [ERROR] [register.py:20] Error during connection: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
-[2024-02-24 18:21:22,961] [ERROR] [survey.py:16] Error during connection: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)

@@ -1,4 +1,0 @@
-[2024-02-29 13:12:33,387] [INFO] [server_logger.py:29] Logger initialized
-[2024-02-29 13:12:33,449] [ERROR] [login.py:25] Error during connection: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
-[2024-02-29 13:12:33,459] [INFO] [register.py:18] Connection Successful
-[2024-02-29 13:12:33,483] [INFO] [survey.py:14] Connection Successful
