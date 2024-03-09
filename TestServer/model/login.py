@@ -1,11 +1,6 @@
-import json
-# import threading
-
 import mysql.connector
-from flask import make_response, session  # , jsonify
-# from threading import Thread
+from flask import make_response, session
 from security.encryption import Encryption
-# from controller.coupon_controller import coupon
 from app import app
 
 encryption = Encryption(key=11)

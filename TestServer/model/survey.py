@@ -25,7 +25,7 @@ class Survey:
             if user_age is not None:
                 self.cur.execute(
                     f"SELECT survey_id, title FROM survey_details WHERE {user_age} > age_lower AND {user_age} < "
-                    f"age_upper AND (total - surveys_left) = surveys_done AND surveys_left>{0}"
+                    f"age_upper AND surveys_left>{0}"
                 )
                 result = self.cur.fetchall()
 

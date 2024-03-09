@@ -1,0 +1,35 @@
+[2024-03-07 18:23:29,746] [INFO] [server_logger.py:29] Logger initialized
+[2024-03-07 18:23:29,779] [INFO] [login.py:18] Connection Successful
+[2024-03-07 18:23:29,783] [INFO] [register.py:16] Connection Successful
+[2024-03-07 18:23:29,791] [INFO] [survey.py:15] Connection Successful
+[2024-03-07 18:23:36,401] [INFO] [login.py:34] Successful login for user: jj@jj.jj
+[2024-03-07 18:23:36,402] [INFO] [login.py:39] (24, 51)
+[2024-03-07 18:23:36,402] [INFO] [login_controller.py:14] Login successful
+[2024-03-07 18:23:43,838] [INFO] [survey.py:33] Survey questions fetched
+[2024-03-07 18:24:44,995] [INFO] [login.py:34] Successful login for user: jj@jj.jj
+[2024-03-07 18:24:44,996] [INFO] [login.py:39] (24, 51)
+[2024-03-07 18:24:44,997] [INFO] [login_controller.py:14] Login successful
+[2024-03-07 18:24:47,676] [INFO] [survey.py:33] Survey questions fetched
+[2024-03-07 18:25:07,377] [INFO] [survey.py:65] {'q1': '1', 'q2': '2', 'q3': '3', 'q4': '4', 'q5': '5', 'q6': '6', 'q7': '7', 'q8': '8', 'q9': '9', 'q10': '10', 'q11': '11', 'q12': '12'}
+[2024-03-07 18:25:07,384] [INFO] [survey.py:72] Survey questions fetched
+[2024-03-07 18:25:12,061] [INFO] [survey.py:96] 51
+[2024-03-07 18:25:22,617] [INFO] [survey.py:33] Survey questions fetched
+[2024-03-07 18:25:33,154] [INFO] [login.py:34] Successful login for user: sss@sss.sss
+[2024-03-07 18:25:33,155] [INFO] [login.py:39] (30, 44)
+[2024-03-07 18:25:33,155] [INFO] [login_controller.py:14] Login successful
+[2024-03-07 18:25:37,071] [INFO] [survey.py:33] Survey questions fetched
+[2024-03-07 18:25:54,860] [INFO] [survey.py:65] {'q1': '8', 'q2': '7', 'q3': '6', 'q4': '5', 'q5': '4', 'q6': '3', 'q7': '8', 'q8': '1', 'q9': '2', 'q10': '10', 'q11': '14', 'q12': '12'}
+[2024-03-07 18:25:54,865] [INFO] [survey.py:72] Survey questions fetched
+[2024-03-07 18:26:01,681] [INFO] [survey.py:96] 44
+[2024-03-07 18:26:11,578] [INFO] [login.py:34] Successful login for user: jj@jj.jj
+[2024-03-07 18:26:11,578] [INFO] [login.py:39] (24, 51)
+[2024-03-07 18:26:11,579] [INFO] [login_controller.py:14] Login successful
+[2024-03-07 18:26:16,276] [INFO] [survey.py:33] Survey questions fetched
+[2024-03-07 18:26:26,238] [INFO] [survey.py:65] {'q1': '8', 'q2': '7', 'q3': '6', 'q4': '5', 'q5': '4', 'q6': '3', 'q7': '8', 'q8': '1', 'q9': '2', 'q10': '10', 'q11': '14', 'q12': '12'}
+[2024-03-07 18:26:26,247] [INFO] [survey.py:72] Survey questions fetched
+[2024-03-07 18:29:16,225] [INFO] [survey.py:96] 51
+[2024-03-07 18:29:39,003] [INFO] [survey.py:33] Survey questions fetched
+[2024-03-07 18:29:46,428] [INFO] [login.py:34] Successful login for user: jj@jj.jj
+[2024-03-07 18:29:46,428] [INFO] [login.py:39] (24, 51)
+[2024-03-07 18:29:46,428] [INFO] [login_controller.py:14] Login successful
+[2024-03-07 18:29:48,892] [INFO] [survey.py:33] Survey questions fetched
