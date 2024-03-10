@@ -5,23 +5,23 @@ from logger.server_logger import setup_logger
 
 import json
 
-data = json.load(open('config.json'))
+app_settings = json.load(open('config.json'))
 
-sql_host = data['sql_config']['host']
-sql_user = data['sql_config']['user']
-sql_password = data['sql_config']['password']
+sql_host = app_settings['sql_config']['host']
+sql_user = app_settings['sql_config']['user']
+sql_password = app_settings['sql_config']['password']
 
 app = Flask(__name__)
 CORS(app)
 
 # Set your secret key
-app.config['SECRET_KEY'] = data['app_config']['SECRET_KEY']
+app.config['SECRET_KEY'] = app_settings['app_config']['SECRET_KEY']
 
 # Configure Flask-Session
-app.config['SESSION_TYPE'] = data['app_config']['SESSION_TYPE']  # Use filesystem as the session storage
-app.config['SESSION_PERMANENT'] = data['app_config']['SESSION_PERMANENT']  # Session is not permanent
-app.config['SESSION_USE_SIGNER'] = data['app_config']['SESSION_USE_SIGNER']  # Sign session cookie for security
-app.config['SESSION_KEY_PREFIX'] = data['app_config']['SESSION_KEY_PREFIX']  # Prefix for session keys
+app.config['SESSION_TYPE'] = app_settings['app_config']['SESSION_TYPE']  # Use filesystem as the session storage
+app.config['SESSION_PERMANENT'] = app_settings['app_config']['SESSION_PERMANENT']  # Session is not permanent
+app.config['SESSION_USE_SIGNER'] = app_settings['app_config']['SESSION_USE_SIGNER']  # Sign session cookie for security
+app.config['SESSION_KEY_PREFIX'] = app_settings['app_config']['SESSION_KEY_PREFIX']  # Prefix for session keys
 Session(app)
 
 # Set up the logger
@@ -30,7 +30,7 @@ setup_logger(app)
 from controller import login_controller
 from controller import register_controller
 from controller import survey_controller
-
+from controller import general_controller
 
 @app.route('/')
 def welcome():
