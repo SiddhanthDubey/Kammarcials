@@ -1,5 +1,5 @@
 from app import app
-from flask import request, make_response
+from flask import request, make_response, json
 from model.register import Register
 
 register = Register()

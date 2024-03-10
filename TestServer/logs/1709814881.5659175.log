@@ -1,6 +1,0 @@
-[2024-03-07 18:04:41,565] [INFO] [server_logger.py:29] Logger initialized
-[2024-03-07 18:04:41,610] [INFO] [login.py:18] Connection Successful
-[2024-03-07 18:04:41,619] [INFO] [register.py:16] Connection Successful
-[2024-03-07 18:04:41,628] [INFO] [survey.py:15] Connection Successful
-[2024-03-07 18:04:44,793] [ERROR] [register.py:44] Error in register_model: Not enough parameters for the SQL statement
-[2024-03-07 18:04:44,794] [INFO] [register_controller.py:27] User registration successful

@@ -1,20 +1,19 @@
 import mysql.connector
+
 from flask import make_response, session
 from security.encryption import Encryption
-from app import app
+from app import *
 
 encryption = Encryption(key=11)
 
 
 class Login:
     def __init__(self):
-        # self.coupon_thread = None
         try:
-            self.con = mysql.connector.connect(host="localhost", user='root', password="",
+            self.con = mysql.connector.connect(host=sql_host, user=sql_user, password=sql_password,
                                                database="kammarcials")
             self.con.autocommit = True
             self.cur = self.con.cursor(dictionary=True)
-
             app.logger.info("Connection Successful")
         except Exception as e:
             app.logger.error(f"Error during connection: {e}")
@@ -36,7 +35,7 @@ class Login:
                     # Store user_id & age in the session
                     session['user_id'] = user_id
                     session['age'] = user_age
-                    app.logger.info((session.get('age'), session.get('user_id')))
+
                     return make_response(
                         {"message": "Login successful", "email": data['email'], "user_id": user_id}, 200)
                 else:
@@ -64,10 +63,9 @@ class Login:
                 # Store user_id & age in the session
                 session['user_id'] = user_id
                 session['age'] = user_age
-                return make_response(
-                    {'status': 1, 'message': 'User found', 'user_id': user_id, 'age': user_age}, 200)
+                return make_response({'message': 'User found', 'user_id': user_id, 'age': user_age}, 200)
             else:
-                return make_response({'status': 2, 'message': 'User not found'}, 200)
+                return make_response({'message': 'User not found'}, 200)
         except Exception as e:
             # Handle exceptions (e.g., database connection error, SQL syntax error)
-            return make_response({'status': 0, 'message': f'Error: {str(e)}'}, 500)
+            return make_response({'message': f'Error: {str(e)}'}, 500)

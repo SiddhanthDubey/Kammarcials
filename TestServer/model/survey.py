@@ -1,17 +1,17 @@
 import mysql.connector
+
 from flask import make_response, session
-from app import app
+from app import *
 from datetime import datetime
 
 
 class Survey:
     def __init__(self):
         try:
-            self.con = mysql.connector.connect(host="localhost", user='root', password="",
+            self.con = mysql.connector.connect(host=sql_host, user=sql_user, password=sql_password,
                                                database="kammarcials")
             self.con.autocommit = True
             self.cur = self.con.cursor(dictionary=True)
-
             app.logger.info("Connection Successful")
         except Exception as e:
             app.logger.error(f"Error during connection: {e}")
@@ -25,7 +25,7 @@ class Survey:
             if user_age is not None:
                 self.cur.execute(
                     f"SELECT survey_id, title FROM survey_details WHERE {user_age} > age_lower AND {user_age} < "
-                    f"age_upper AND surveys_left>{0}"
+                    f"age_upper AND (total - surveys_left) = surveys_done AND surveys_left>{0}"
                 )
                 result = self.cur.fetchall()
 

@@ -1,5 +1,0 @@
-[2024-03-07 17:57:24,528] [INFO] [server_logger.py:29] Logger initialized
-[2024-03-07 17:57:24,599] [INFO] [login.py:23] Connection Successful
-[2024-03-07 17:57:24,615] [INFO] [register.py:18] Connection Successful
-[2024-03-07 17:57:24,641] [INFO] [survey.py:15] Connection Successful
-[2024-03-07 18:03:10,814] [ERROR] [register_controller.py:27] Error in register_controller: Expecting value: line 1 column 1 (char 0)
