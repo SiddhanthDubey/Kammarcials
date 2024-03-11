@@ -47,7 +47,7 @@ class Register:
 
             encrypted_password = encryption.encrypt(data['password'])
             self.cur.execute(
-                "INSERT INTO users(password, email, age, fist_name, last_name) VALUES(%s, %s, %s, %s, %s)",
+                "INSERT INTO users(password, email, age, first_name, last_name) VALUES(%s, %s, %s, %s, %s)",
                 (encrypted_password, data['email'], data['age'], data['first_name'], data['last_name'])
             )
 
