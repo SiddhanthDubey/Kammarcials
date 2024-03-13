@@ -32,6 +32,7 @@ from controller import register_controller
 from controller import survey_controller
 from controller import general_controller
 
+
 @app.route('/')
 def welcome():
     app.logger.info("Welcome endpoint accessed")

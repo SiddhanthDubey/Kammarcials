@@ -1,0 +1,66 @@
+[2024-03-14 00:54:19,203] [INFO] [server_logger.py:29] Logger initialized
+[2024-03-14 00:54:19,225] [INFO] [login.py:17] Connection Successful
+[2024-03-14 00:54:19,227] [INFO] [register.py:17] Connection Successful
+[2024-03-14 00:54:19,230] [INFO] [survey.py:15] Connection Successful
+[2024-03-14 00:54:19,232] [INFO] [query.py:13] Connection Successful
+[2024-03-14 00:54:35,367] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 00:54:37,401] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 00:54:41,480] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 00:56:10,494] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 00:56:12,532] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 00:56:16,615] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 01:01:19,380] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 01:01:21,418] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 01:01:25,506] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 01:01:27,570] [INFO] [register.py:34] Added user with ID 2
+[2024-03-14 01:01:27,570] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:01:29,658] [INFO] [register.py:34] Added user with ID 3
+[2024-03-14 01:01:29,658] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:01:31,707] [INFO] [register.py:55] Added user with ID 58
+[2024-03-14 01:01:31,707] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:01:33,758] [INFO] [register.py:55] Added user with ID 59
+[2024-03-14 01:01:33,758] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:02:52,441] [INFO] [login.py:61] Successful login for user: test@example.com
+[2024-03-14 01:02:54,499] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 01:02:56,542] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 01:03:00,624] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 01:03:02,679] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:03:04,722] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:03:06,810] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:03:08,853] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:08:10,926] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 01:08:12,965] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 01:08:17,050] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 01:08:19,106] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:08:21,169] [INFO] [register.py:34] Added user with ID 4
+[2024-03-14 01:08:21,169] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:08:23,220] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:08:25,268] [INFO] [register.py:55] Added user with ID 60
+[2024-03-14 01:08:25,268] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:11:25,626] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 01:11:27,659] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 01:11:31,730] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 01:11:33,787] [ERROR] [query.py:26] Error in user_query_model: 1054 (42S22): Unknown column 'user_id' in 'field list'
+[2024-03-14 01:11:33,788] [INFO] [general_controller.py:14] User query received successfully
+[2024-03-14 01:11:35,876] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:11:37,917] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:11:39,957] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:11:41,996] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:12:48,602] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 01:12:50,641] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 01:12:54,723] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 01:12:56,782] [ERROR] [query.py:26] Error in user_query_model: 1054 (42S22): Unknown column 'user_id' in 'field list'
+[2024-03-14 01:12:56,783] [INFO] [general_controller.py:14] User query received successfully
+[2024-03-14 01:12:58,872] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:13:00,910] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:13:02,954] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:13:04,996] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:16:14,324] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 01:16:16,369] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 01:16:20,459] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 01:16:22,523] [ERROR] [query.py:26] Error in user_query_model: 1054 (42S22): Unknown column 'user_id' in 'field list'
+[2024-03-14 01:16:22,524] [INFO] [general_controller.py:14] User query received successfully
+[2024-03-14 01:16:24,606] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:16:26,643] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 01:16:28,686] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 01:16:30,723] [INFO] [register_controller.py:27] User registration successful

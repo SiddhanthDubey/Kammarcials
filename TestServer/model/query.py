@@ -21,7 +21,7 @@ class Query:
                 (data['email'], data['name'], session.get('user_id'), data['query'])
             )
             app.logger.info(f"Added query of user with ID {session.get('user_id')}")
-            return make_response({"message": "User registered successfully", "user_id": session.get('user_id')}, 201)
+            return make_response({"message": "User query received successfully", "user_id": session.get('user_id')}, 201)
         except Exception as e:
             app.logger.error(f"Error in user_query_model: {e}")
             return make_response({"message": f"An error occurred while processing your request to register: {e}"}, 500)

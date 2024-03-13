@@ -11,8 +11,6 @@ def login_controller():
         # data = json.loads(request.data.decode("utf-8"))
         data = request.form
         result = login.login_model(data)
-        app.logger.info("Login successful")
-
         return result
     except Exception as e:
         app.logger.error(f"Error in login_controller: {str(e)}")
@@ -25,7 +23,6 @@ def google_login_controller():
         # data = json.loads(request.data.decode("utf-8"))
         data = request.form
         result = login.google_login_model(data)
-        app.logger.info("Login successful")
 
         return result
     except Exception as e:
