@@ -1,0 +1,28 @@
+[2024-03-14 11:24:33,913] [INFO] [server_logger.py:29] Logger initialized
+[2024-03-14 11:24:33,935] [INFO] [login.py:17] Connection Successful
+[2024-03-14 11:24:33,938] [INFO] [register.py:17] Connection Successful
+[2024-03-14 11:24:33,941] [INFO] [survey.py:15] Connection Successful
+[2024-03-14 11:24:33,943] [INFO] [query.py:13] Connection Successful
+[2024-03-14 11:24:48,282] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 11:24:50,320] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 11:24:54,372] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 11:24:56,493] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 11:24:58,528] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 11:25:00,573] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 11:25:02,599] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 11:25:04,638] [ERROR] [survey.py:76] Error in survey_model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[2024-03-14 11:25:06,762] [ERROR] [survey.py:99] Error in survey_model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[2024-03-14 11:39:52,209] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 11:39:54,235] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 11:39:58,288] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 14:10:13,448] [WARNING] [login.py:45] Invalid login attempt with email: iad@dsf.add
+[2024-03-14 14:10:15,476] [WARNING] [login.py:42] Invalid login attempt for email: ss@ss.ss
+[2024-03-14 14:10:19,526] [INFO] [login.py:33] Successful login for user: ss@ss.ss
+[2024-03-14 14:10:21,627] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 14:10:23,649] [INFO] [register_controller.py:14] User registration successful
+[2024-03-14 14:10:25,690] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 14:10:27,714] [INFO] [register_controller.py:27] User registration successful
+[2024-03-14 14:10:29,755] [ERROR] [survey.py:76] Error in survey_model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[2024-03-14 14:10:31,864] [ERROR] [survey.py:99] Error in survey_model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[2024-03-14 14:10:31,871] [INFO] [app.py:38] Welcome endpoint accessed
+[2024-03-14 14:10:31,874] [INFO] [app.py:44] Home page accessed

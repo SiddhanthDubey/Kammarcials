@@ -1,0 +1,18 @@
+stages:
+  - test
+
+test_app:
+  image: python:latest
+  stage: test
+  before_script:
+    - python -V
+    - pip install virtualenv
+    - python -m venv myenv
+    - myenv\Scripts\activate
+  script:
+    - pip install -r requirements.txt
+    - flask run
+    - python test_server\test_login.py
+    - python test_server\test_survey.py
+    - python test_server\test_tes_server.py
+

@@ -1,5 +1,0 @@
-[2024-03-14 01:54:53,432] [INFO] [server_logger.py:29] Logger initialized
-[2024-03-14 01:54:53,454] [INFO] [login.py:17] Connection Successful
-[2024-03-14 01:54:53,457] [INFO] [register.py:17] Connection Successful
-[2024-03-14 01:54:53,461] [INFO] [survey.py:15] Connection Successful
-[2024-03-14 01:54:53,463] [INFO] [query.py:13] Connection Successful
