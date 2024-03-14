@@ -1,20 +1,16 @@
 import unittest
-import requests
+from app import Welcome, Home_page
 
+class TestAppFunctions(unittest.TestCase):
+    def test_welcome_function(self):
+        expected_output = "Hello World"
+        result = Welcome()
+        self.assertEqual(result, expected_output)
 
-class TestWelcomeEndpoint(unittest.TestCase):
-    def test_welcome_endpoint(self):
-        response = requests.get('http://127.0.0.1:5000/')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Hello World', response.content)
-
-
-class TestHomePageEndpoint(unittest.TestCase):
-    def test_home_page_endpoint(self):
-        response = requests.get('http://127.0.0.1:5000/home')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'This is the home page', response.content)
-
+    def test_home_page_function(self):
+        expected_output = "This is the home page"
+        result = Home_page()
+        self.assertEqual(result, expected_output)
 
 if __name__ == '__main__':
     unittest.main()
