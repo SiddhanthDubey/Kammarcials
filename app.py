@@ -44,7 +44,11 @@ def home_page():
     app.logger.info("Home page accessed")
     return "This is the home page"
 
+def Welcome():
+    return "Hello World"
 
+def Home_page():
+    return "This is the home page"
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000)

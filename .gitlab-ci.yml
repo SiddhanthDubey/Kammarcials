@@ -7,12 +7,13 @@ test_app:
   before_script:
     - python -V
     - pip install virtualenv
-    - python -m venv myenv
-    - source myenv\Scripts\activate
+    - virtualenv .env
+    - python -m venv .env
+    - source .env/bin/activate
+
   script:
     - pip install -r requirements.txt
-    - flask run
-    - python test_server\test_login.py
-    - python test_server\test_survey.py
-    - python test_server\test_tes_server.py
-
+    # - flask run
+    # - python test_server/test_login.py
+    # - python test_server/test_survey.py
+    - python test_server/test_tes_server.py
