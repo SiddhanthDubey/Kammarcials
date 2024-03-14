@@ -1,0 +1,5 @@
+[2024-03-14 11:12:45,582] [INFO] [server_logger.py:29] Logger initialized
+[2024-03-14 11:12:47,665] [ERROR] [login.py:19] Error during connection: 2003: Can't connect to MySQL server on 'localhost:3306' (10061 No connection could be made because the target machine actively refused it)
+[2024-03-14 11:12:49,701] [ERROR] [register.py:19] Error during connection: 2003: Can't connect to MySQL server on 'localhost:3306' (10061 No connection could be made because the target machine actively refused it)
+[2024-03-14 11:12:51,736] [ERROR] [survey.py:17] Error during connection: 2003: Can't connect to MySQL server on 'localhost:3306' (10061 No connection could be made because the target machine actively refused it)
+[2024-03-14 11:12:53,770] [ERROR] [query.py:15] Error during connection: 2003: Can't connect to MySQL server on 'localhost:3306' (10061 No connection could be made because the target machine actively refused it)
