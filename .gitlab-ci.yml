@@ -8,7 +8,7 @@ test_app:
     - python -V
     - pip install virtualenv
     - python -m venv myenv
-    - myenv\Scripts\activate
+    - source myenv\Scripts\activate
   script:
     - pip install -r requirements.txt
     - flask run
