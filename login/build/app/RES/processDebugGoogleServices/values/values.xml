@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1034177805529-7l265hs22vjao76n5n2endo94gnots2a.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1034177805529</string>
+    <string name="google_api_key" translatable="false">AIzaSyCj4B45a2mm-SsATiDv-GfaOKdISJR6CW4</string>
+    <string name="google_app_id" translatable="false">1:1034177805529:android:f46f6bffebfc0fa1af92c8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCj4B45a2mm-SsATiDv-GfaOKdISJR6CW4</string>
+    <string name="google_storage_bucket" translatable="false">kammercials.appspot.com</string>
+    <string name="project_id" translatable="false">kammercials</string>
+</resources>

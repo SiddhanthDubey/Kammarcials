@@ -1,0 +1,1 @@
+ C:\\Users\\admin\\Desktop\\Kammericals\\Kammarcials\\login\\.dart_tool\\flutter_build\\afb3a7e279fe3cb0d64da036af28437e\\native_assets.yaml: 
